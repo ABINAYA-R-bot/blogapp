@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Inkwell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="index.html" class="brand">Inkwell<span class="brand-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="create-blog.html">Write</a>
+    </nav>
+    <div class="nav-actions" data-nav-auth></div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="dash-shell" id="dashboardRoot">
+  <aside class="dash-side">
+    <div class="dash-user">
+      <div class="dash-avatar" id="dashAvatar">--</div>
+      <div>
+        <div class="dash-user-name" id="dashUserName">—</div>
+        <div class="dash-user-email" id="dashUserEmail">—</div>
+      </div>
+    </div>
+    <nav class="dash-nav" aria-label="Dashboard">
+      <a href="dashboard.html" class="active">Your posts</a>
+      <a href="create-blog.html">Write new post</a>
+      <a href="index.html">View public blog</a>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <div class="dash-head">
+      <div>
+        <h1>Welcome back, <span id="dashGreetName">—</span></h1>
+        <p>Here's what's happening with your writing.</p>
+      </div>
+      <a href="create-blog.html" class="btn btn-primary">+ New post</a>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="num" id="statTotal">0</span>
+        <span class="label">Total posts</span>
+      </div>
+      <div class="stat-card">
+        <span class="num" id="statPublished">0</span>
+        <span class="label">Published</span>
+      </div>
+      <div class="stat-card">
+        <span class="num" id="statDrafts">0</span>
+        <span class="label">Drafts</span>
+      </div>
+    </div>
+
+    <div class="table-wrap" id="postsTableWrap">
+      <table class="posts-table">
+        <thead>
+          <tr>
+            <th>Post</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Last updated</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="postsTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="empty-state" id="postsEmptyState" style="display:none;">
+      <h3>You haven't written anything yet</h3>
+      <p>Your first post is one click away.</p>
+      <a href="create-blog.html" class="btn btn-primary">Write your first post</a>
+    </div>
+  </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

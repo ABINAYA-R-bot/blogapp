@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — Inkwell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="index.html" class="brand">Inkwell<span class="brand-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-blog.html">Write</a>
+    </nav>
+    <div class="nav-actions" data-nav-auth>
+      <a href="login.html" class="btn btn-outline active">Log in</a>
+      <a href="register.html" class="btn btn-primary">Register</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <aside class="auth-side">
+    <blockquote>
+      “The scariest moment is always just before you start.”
+      <cite>— a note every writer keeps somewhere</cite>
+    </blockquote>
+    <div class="side-foot">Demo login — email: alex@inkwell.dev · password: password123</div>
+  </aside>
+
+  <div class="auth-form-wrap">
+    <form class="auth-form" id="loginForm" novalidate>
+      <h1>Welcome back</h1>
+      <p class="sub">Log in to keep writing where you left off.</p>
+
+      <div class="form-alert" id="loginAlert"></div>
+
+      <div class="field" data-field="email">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        <div class="error"></div>
+      </div>
+
+      <div class="field" data-field="password">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required />
+        <div class="error"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+
+      <p class="form-foot">Don't have an account? <a href="register.html">Register</a></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

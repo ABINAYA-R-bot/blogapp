@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register — Inkwell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="index.html" class="brand">Inkwell<span class="brand-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-blog.html">Write</a>
+    </nav>
+    <div class="nav-actions" data-nav-auth>
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <a href="register.html" class="btn btn-primary active">Register</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="auth-shell">
+  <aside class="auth-side">
+    <blockquote>
+      “Every writer you admire started with a blank page and a low bar for the first draft.”
+      <cite>— Inkwell style guide, page 1</cite>
+    </blockquote>
+    <div class="side-foot">Free to join. No credit card, no real backend — this is a frontend practice project.</div>
+  </aside>
+
+  <div class="auth-form-wrap">
+    <form class="auth-form" id="registerForm" novalidate>
+      <h1>Create your account</h1>
+      <p class="sub">Set up your byline in under a minute.</p>
+
+      <div class="form-alert" id="registerAlert"></div>
+
+      <div class="field" data-field="name">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" placeholder="Jordan Lee" autocomplete="name" required />
+        <div class="error"></div>
+      </div>
+
+      <div class="field" data-field="email">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+        <div class="error"></div>
+      </div>
+
+      <div class="field" data-field="password">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="At least 6 characters" autocomplete="new-password" required />
+        <div class="error"></div>
+      </div>
+
+      <div class="field" data-field="confirm">
+        <label for="confirm">Confirm password</label>
+        <input type="password" id="confirm" name="confirm" placeholder="Repeat your password" autocomplete="new-password" required />
+        <div class="error"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+
+      <p class="form-foot">Already have an account? <a href="login.html">Log in</a></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inkwell — a small blog for slow writing</title>
+<meta name="description" content="Inkwell is a minimal blogging platform for writers who'd rather publish less, better." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-row">
+    <a href="index.html" class="brand">Inkwell<span class="brand-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html" class="active">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create-blog.html">Write</a>
+    </nav>
+    <div class="nav-actions" data-nav-auth>
+      <a href="login.html" class="btn btn-outline">Log in</a>
+      <a href="register.html" class="btn btn-primary">Register</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow-line"></div>
+      <h1>Publish less. Write it properly.</h1>
+      <p class="lede">Inkwell is a small home for writing that took longer than a scroll-stop headline — essays, field notes, and the occasional argument worth having.</p>
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary">Start writing</a>
+        <a href="#posts" class="btn btn-outline" style="border-color:#fff;color:#fff;">Read the blog</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-row">
+        <strong id="heroPostCount">—</strong>
+        pieces published so far
+      </div>
+      <div class="hero-meta-row">
+        <strong>4 min</strong>
+        average reading time
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="posts">
+  <div class="container">
+    <div class="section-head">
+      <h2>Latest writing</h2>
+      <span class="count" id="homePostCount">—</span>
+    </div>
+    <div class="post-grid" id="homePostGrid">
+      <!-- populated by js/script.js -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>© 2026 Inkwell. A frontend practice project.</span>
+    <span>Built with HTML, CSS &amp; JavaScript</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // small extra: fill the hero's live post count once posts are seeded
+    setTimeout(() => {
+      const posts = JSON.parse(localStorage.getItem("inkwell_posts") || "[]")
+        .filter(p => p.status === "published");
+      document.getElementById("heroPostCount").textContent = posts.length;
+    }, 0);
+  });
+</script>
+</body>
+</html>
