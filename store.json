@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "3c4ae752-8fb8-41db-bc3b-903b00ad5052",
+      "name": "ABINAYA R",
+      "email": "abinayarvndrn@gmail.com",
+      "passwordHash": "b546c65a3820f87b2eaa5566f12af401:0d2f4f7bc8793ae8cd4ec9db4c900f89ec4f1ef1d850f75b8b096a329d3b28bc4c54217e0603bef4a66727513922838b76129de1a5f4327aca08c57ce3147a7d",
+      "createdAt": 1793464714758
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "authorId": "u_demo",
+      "authorName": "Alex Rivera",
+      "title": "Why slow writing makes better blogs",
+      "category": "Craft",
+      "excerpt": "Most advice about blogging is about speed. Here's an argument for the opposite — and what changes when you let a draft sit.",
+      "body": "Most advice about blogging is about speed: publish more, publish faster, never miss a week. But some of the posts people remember longest were the ones that sat unfinished for a month.\n\nWhen a draft sits, you stop defending your first idea and start noticing the better one underneath it. The extra week rarely costs you an audience. It usually costs you the version of the post you'd have been embarrassed by in a year.\n\nTry it on your next draft: write it, then don't publish for 72 hours. Read it once more before it goes out. You'll cut a third of it, and the third you cut is never the part anyone missed.",
+      "status": "published",
+      "createdAt": 1792946083574
+    },
+    {
+      "id": "p2",
+      "authorId": "u_demo",
+      "authorName": "Alex Rivera",
+      "title": "A field guide to writer's block that actually works",
+      "category": "Process",
+      "excerpt": "Not another motivational pep talk — a short, practical list of what to do in the first five minutes you're stuck.",
+      "body": "Writer's block isn't usually a lack of ideas. It's a lack of a small enough next step. Here's what helps in the first five minutes:\n\n1. Lower the bar to one true sentence, not a finished paragraph.\n2. Write the ending first if the beginning won't come.\n3. Read the last three sentences out loud — you'll usually hear the next one.\n\nNone of this is profound. It works because it's small enough to actually do.",
+      "status": "published",
+      "createdAt": 1793205283574
+    }
+  ]
+}
